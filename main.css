@@ -42,15 +42,9 @@ header{
     padding: 15px;
   }
 
-  .about__image {
-    width: 500px;
-  }
-   
-  .about__sun-image {
-    width: 100px;
-    height: 100px;
-  }
+ 
   .about {
+   
     display: flex;
     justify-content: space-around;
     align-items:center;
@@ -59,30 +53,79 @@ header{
     background: url('img/back.png') no-repeat;
     background-position: center;
     background-size: cover;
-
+    position: relative;
   }
+  .orb-canvas{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    
+}
 
-  .about h1{
-    font-size:70px;
-    line-height: 76px;
-  }
+.about h1{
+  font-size:70px;
+  line-height: 76px;
+}
 
-  .about p{
-    font-size:18px;
-    line-height: 30px;
-    opacity: 0.8;
-  }
+.about p{
+  font-size:18px;
+  line-height: 30px;
+  opacity: 0.8;
+}
 
-  .about button{
+.about button{
 font-size: 18px;
 border-radius: 20px;
 padding: 20px 25px;
 margin-top: 20px;
-  }
+}
 
 .about__info{
-    max-width: 550px;
+  max-width: 550px;
 }
+
+ 
+@keyframes rotation {
+  0% {
+      transform: rotate(0);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.about__sun-image {
+  width: 100px;
+  height: 100px;
+  animation: rotation 10s infinite linear;
+  position: absolute;
+}
+
+.about__image {
+  width: 500px;
+
+}
+
+/* .about__sun-image:hover {
+
+  width: 100px;
+    height: 100px;
+    animation: rotation 10s linear infinite;
+    position: absolute; */
+  /* animation-name: rotation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* transform: scale(0.5, 2.0); */
+  /* position: absolute;
+  width: 100px;
+  height: 100px; */
+  /* position: absolute;  */
+/* } */
+
+ 
 
 .form__container{
   width:550px;
@@ -371,17 +414,7 @@ footer{
 }
 } */
 
-.about__sun-image:hover {
-  /* animation-name: rotation;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; */
-  transform: scale(0.5, 2.0);
-  /* position: absolute;
-  width: 100px;
-  height: 100px;
-  position: absolute; */
-}
+
 
 /* Планшеты */
 @media (max-width: 1024px) {
